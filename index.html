@@ -1,4 +1,11 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A poker and blackjack trainer for learning to play the odds.">
 <title>The Odd Coach</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23174a3b'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23e2ece6'%3E%E2%99%A0%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Libre+Caslon+Text:wght@700&display=swap">
@@ -48,6 +55,7 @@
 
 /* ---- Page layout ---- */
 * { box-sizing: border-box; }
+[hidden] { display: none !important; } /* the inactive page; .layout's display:grid would otherwise override it */
 body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 var(--f-body); padding-inline: 16px; padding-block: 14px 40px; }
 button, select { font: inherit; }
 .app { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "brand" "layout"; gap: 14px; }
@@ -458,7 +466,8 @@ details.chart-toggle[open] summary { margin-bottom: 8px; }
 @media (max-width: 379px) { .tab { padding-inline: 7px; } .brand h1 { font-size: 19px; } }
 
 </style>
-
+</head>
+<body>
 <div class="app">
   <header class="brand">
     <span class="logo" aria-hidden="true">♠</span>
@@ -3475,3 +3484,5 @@ window.__bj = {
 
 })();
 </script>
+</body>
+</html>
